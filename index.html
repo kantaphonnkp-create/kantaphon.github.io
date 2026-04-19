@@ -341,7 +341,26 @@
     }
 
     /* ── ABOUT ── */
-    #about { background: var(--surface); }
+    #about {
+      background-image: url('About%20me%20background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      position: relative;
+    }
+
+    #about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+
+    #about > * {
+      position: relative;
+      z-index: 1;
+    }
 
     .about-grid {
       display: grid;
